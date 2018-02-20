@@ -22,10 +22,17 @@
  *
  */
 
-module be.yildizgames.module.database.mysql {
-    requires be.yildizgames.module.database;
-    requires mysql.connector.java;
-    requires org.jooq;
+package be.yildizgames.module.database.mysql;
 
-    exports be.yildizgames.module.database.mysql;
+import be.yildizgames.module.database.DatabaseSystemRegisterer;
+
+/**
+ * @author Grégory Van den Borre
+ */
+public class MysqlSystemRegisterer implements DatabaseSystemRegisterer {
+
+    @Override
+    public void register() {
+        MysqlSystem.support();
+    }
 }

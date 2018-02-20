@@ -24,9 +24,9 @@
 
 package be.yildizgames.module.database.mysql;
 
-import be.yildiz.module.database.BaseDatabaseSystem;
-import be.yildiz.module.database.DatabaseConnectionProviderFactory;
-import be.yildiz.module.database.DriverProvider;
+import be.yildizgames.module.database.BaseDatabaseSystem;
+import be.yildizgames.module.database.DatabaseConnectionProviderFactory;
+import be.yildizgames.module.database.DriverProvider;
 import com.mysql.cj.jdbc.Driver;
 import org.jooq.SQLDialect;
 
