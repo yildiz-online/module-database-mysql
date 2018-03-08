@@ -24,9 +24,9 @@
 
 package be.yildizgames.module.database.mysql;
 
-import be.yildiz.module.database.DataBaseConnectionProvider;
-import be.yildiz.module.database.DatabaseConnectionProviderFactory;
-import be.yildiz.module.database.DbProperties;
+import be.yildizgames.module.database.DataBaseConnectionProvider;
+import be.yildizgames.module.database.DatabaseConnectionProviderFactory;
+import be.yildizgames.module.database.DbProperties;
 import org.jooq.SQLDialect;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
