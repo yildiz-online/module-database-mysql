@@ -21,57 +21,21 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  SOFTWARE.
  *
  */
-
 package be.yildizgames.module.database.mysql;
 
-import be.yildizgames.module.database.BaseDatabaseSystem;
-import be.yildizgames.module.database.DatabaseConnectionProviderFactory;
-import be.yildizgames.module.database.DriverProvider;
 import be.yildizgames.module.database.QueryBuilder;
-import com.mysql.cj.jdbc.Driver;
-import org.jooq.SQLDialect;
 
-import java.util.Calendar;
+public class MySqlQueryBuilder extends QueryBuilder {
 
-/**
- * @author Grégory Van den Borre
- */
-public class MysqlSystem extends BaseDatabaseSystem {
-
-    public static final String KEY = "mysql";
-
-    private final DriverProvider provider = Driver::new;
-
-    private MysqlSystem() {
-        super("jdbc:mysql://${1}:${2}/${0}?zeroDateTimeBehavior=convertToNull&createDatabaseIfNotExist=true&nullNamePatternMatchesAll=true&useSSL=false&serverTimezone=" + Calendar.getInstance().getTimeZone().getID());
-    }
-
-    public static void support() {
-        DatabaseConnectionProviderFactory.getInstance().addSystem(KEY, new MysqlSystem());
+    @Override
+    public QueryBuilder selectAllFrom(String table) {
+        this.append("SELECT * FROM " + table + " ");
+        return this;
     }
 
     @Override
-    public final SQLDialect getDialect() {
-        return SQLDialect.MYSQL;
-    }
-
-    @Override
-    public final String getDriver() {
-        return "com.mysql.cj.jdbc.Driver";
-    }
-
-    @Override
-    public final DriverProvider getDriverProvider() {
-        return this.provider;
-    }
-
-    @Override
-    public QueryBuilder createBuilder() {
-        return new MySqlQueryBuilder();
-    }
-
-    @Override
-    public boolean requirePool() {
-        return true;
+    public QueryBuilder limit(int number) {
+        this.append("LIMIT " + number + " ");
+        return this;
     }
 }
