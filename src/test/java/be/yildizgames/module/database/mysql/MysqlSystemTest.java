@@ -28,6 +28,7 @@ import be.yildizgames.module.database.DataBaseConnectionProvider;
 import be.yildizgames.module.database.DatabaseConnectionProviderFactory;
 import be.yildizgames.module.database.DbProperties;
 import org.jooq.SQLDialect;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
@@ -43,6 +44,7 @@ public class MysqlSystemTest {
     @Nested
     public class Support {
 
+        @Disabled
         @Test
         public void happyFlow() throws SQLException {
             MysqlSystem.support();
