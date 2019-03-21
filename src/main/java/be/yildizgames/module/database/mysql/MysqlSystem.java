@@ -40,6 +40,9 @@ public class MysqlSystem extends BaseDatabaseSystem {
 
     public static final String KEY = "mysql";
 
+    /**
+     * Driver provider.
+     */
     private final DriverProvider provider = Driver::new;
 
     private MysqlSystem() {

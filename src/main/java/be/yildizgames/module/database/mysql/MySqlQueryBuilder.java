@@ -25,16 +25,19 @@ package be.yildizgames.module.database.mysql;
 
 import be.yildizgames.module.database.QueryBuilder;
 
+/**
+ * @author Grégory Van den Borre
+ */
 public class MySqlQueryBuilder extends QueryBuilder {
 
     @Override
-    public QueryBuilder selectAllFrom(String table) {
+    public final QueryBuilder selectAllFrom(String table) {
         this.append("SELECT * FROM " + table + " ");
         return this;
     }
 
     @Override
-    public QueryBuilder limit(int number) {
+    public final QueryBuilder limit(int number) {
         this.append("LIMIT " + number + " ");
         return this;
     }
