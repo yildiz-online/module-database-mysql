@@ -77,4 +77,5 @@ public class MysqlSystem extends BaseDatabaseSystem {
     public boolean requirePool() {
         return true;
     }
+
 }

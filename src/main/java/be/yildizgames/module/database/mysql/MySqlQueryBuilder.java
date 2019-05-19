@@ -41,4 +41,5 @@ public class MySqlQueryBuilder extends QueryBuilder {
         this.append("LIMIT " + number + " ");
         return this;
     }
+
 }
