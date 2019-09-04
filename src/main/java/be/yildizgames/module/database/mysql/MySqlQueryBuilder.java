@@ -37,6 +37,11 @@ public class MySqlQueryBuilder extends QueryBuilder {
     }
 
     @Override
+    public QueryBuilder selectAllFrom(String schema, String table) {
+        return this.selectAllFrom(schema + "." + table);
+    }
+
+    @Override
     public final QueryBuilder limit(int number) {
         this.append("LIMIT " + number + " ");
         return this;
