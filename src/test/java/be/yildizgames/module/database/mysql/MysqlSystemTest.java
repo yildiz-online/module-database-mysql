@@ -39,14 +39,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * @author Grégory Van den Borre
  */
-public class MysqlSystemTest {
+class MysqlSystemTest {
 
     @Nested
-    public class Support {
+    class Support {
 
         @Disabled
         @Test
-        public void happyFlow() throws SQLException {
+        void happyFlow() throws SQLException {
             MysqlSystem.support();
             DbProperties properties = new MysqlProperties();
             DataBaseConnectionProvider dcp = DatabaseConnectionProviderFactory.getInstance().create(properties);

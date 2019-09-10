@@ -22,7 +22,7 @@
  *
  */
 
-module be.yildizgames.module.database.mysql {
+open module be.yildizgames.module.database.mysql {
     requires java.sql;
 
     requires be.yildizgames.module.database;
