@@ -46,7 +46,7 @@ public class MysqlSystem extends BaseDatabaseSystem {
     private final DriverProvider provider = Driver::new;
 
     private MysqlSystem() {
-        super("jdbc:mysql://${1}:${2}/${0}?zeroDateTimeBehavior=convertToNull&createDatabaseIfNotExist=true&nullNamePatternMatchesAll=true&useSSL=false&serverTimezone=" + Calendar.getInstance().getTimeZone().getID());
+        super("jdbc:mysql://{1}:{2}/{0}?zeroDateTimeBehavior=convertToNull&createDatabaseIfNotExist=true&nullNamePatternMatchesAll=true&useSSL=false&serverTimezone=" + Calendar.getInstance().getTimeZone().getID());
     }
 
     public static void support() {
