@@ -32,8 +32,6 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import java.sql.SQLException;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -46,7 +44,7 @@ class MysqlSystemTest {
 
         @Disabled
         @Test
-        void happyFlow() throws SQLException {
+        void happyFlow() {
             MysqlSystem.support();
             DbProperties properties = new MysqlProperties();
             DataBaseConnectionProvider dcp = DatabaseConnectionProviderFactory.getInstance().create(properties);
