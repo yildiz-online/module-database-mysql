@@ -27,7 +27,6 @@ package be.yildizgames.module.database.mysql;
 import be.yildizgames.module.database.DataBaseConnectionProvider;
 import be.yildizgames.module.database.DatabaseConnectionProviderFactory;
 import be.yildizgames.module.database.DbProperties;
-import org.jooq.SQLDialect;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -49,7 +48,6 @@ class MysqlSystemTest {
             DbProperties properties = new MysqlProperties();
             DataBaseConnectionProvider dcp = DatabaseConnectionProviderFactory.getInstance().create(properties);
 
-            assertEquals(SQLDialect.MYSQL, dcp.getDialect());
             assertEquals("com.mysql.cj.jdbc.Driver", dcp.getDriver());
         }
     }

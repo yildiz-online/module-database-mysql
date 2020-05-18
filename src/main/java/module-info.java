@@ -27,7 +27,6 @@ open module be.yildizgames.module.database.mysql {
 
     requires be.yildizgames.module.database;
     requires mysql.connector.java;
-    requires org.jooq;
 
     provides be.yildizgames.module.database.DatabaseSystemRegisterer
             with be.yildizgames.module.database.mysql.MysqlSystemRegisterer;
