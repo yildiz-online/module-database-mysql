@@ -63,8 +63,8 @@ public class MysqlSystem extends BaseDatabaseSystem {
     }
 
     @Override
-    public QueryBuilder createBuilder() {
-        return new MySqlQueryBuilder();
+    public QueryBuilder createBuilder(String table) {
+        return new MySqlQueryBuilder(table);
     }
 
     @Override

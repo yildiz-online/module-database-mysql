@@ -28,22 +28,31 @@ import be.yildizgames.module.database.QueryBuilder;
 /**
  * @author Grégory Van den Borre
  */
-public class MySqlQueryBuilder extends QueryBuilder {
+class MySqlQueryBuilder extends QueryBuilder {
+
+    MySqlQueryBuilder(String table) {
+        super(table);
+    }
 
     @Override
-    public final QueryBuilder selectAllFrom(String table) {
-        this.append("SELECT * FROM " + table + " ");
+    public final QueryBuilder selectAllFrom() {
+        this.append("SELECT * FROM " + this.table + " ");
         return this;
     }
 
     @Override
-    public QueryBuilder selectAllFrom(String schema, String table) {
-        return this.selectAllFrom(schema + "." + table);
+    public QueryBuilder selectAllFrom(String schema) {
+        return this.selectAllFrom(schema + "." + this.table);
     }
 
     @Override
     public final QueryBuilder limit(int number) {
         this.append("LIMIT " + number + " ");
+        return this;
+    }
+
+    @Override
+    public QueryBuilder merge(String s, String... strings) {
         return this;
     }
 
