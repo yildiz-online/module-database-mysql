@@ -29,7 +29,7 @@
   <modelVersion>4.0.0</modelVersion>
   <name>Yildiz-Engine Module Database Mysql</name>
   <description>Mysql implementation for the module database</description>
-  <url>https://bitbucket.org/yildiz-engine-team/module-database-mysql</url>
+  <url>https://github.com/yildiz-online/module-database-mysql</url>
 
   <artifactId>module-database-mysql</artifactId>
   <version>1.0.6-SNAPSHOT</version>
@@ -37,9 +37,9 @@
   <packaging>jar</packaging>
   <inceptionYear>2017</inceptionYear>
   <scm>
-    <connection>scm:git:https://bitbucket.org/yildiz-engine-team/module-database-mysql</connection>
-    <developerConnection>scm:git:https://bitbucket.org/yildiz-engine-team/module-database-mysql</developerConnection>
-    <url>https://bitbucket.org/yildiz-engine-team/module-database-mysql</url>
+    <connection>scm:git:https://github.com/yildiz-online/module-database-mysql</connection>
+    <developerConnection>scm:git:https://github.com/yildiz-online/module-database-mysql</developerConnection>
+    <url>https://github.com/yildiz-online/module-database-mysql</url>
   </scm>
   <parent>
     <groupId>be.yildiz-games</groupId>
