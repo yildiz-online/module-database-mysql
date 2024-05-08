@@ -27,7 +27,6 @@ package be.yildizgames.module.database.mysql;
 import be.yildizgames.module.database.BaseDatabaseSystem;
 import be.yildizgames.module.database.DatabaseConnectionProviderFactory;
 import be.yildizgames.module.database.DriverProvider;
-import be.yildizgames.module.database.QueryBuilder;
 import com.mysql.cj.jdbc.Driver;
 
 import java.util.Calendar;
@@ -58,14 +57,10 @@ public class MysqlSystem extends BaseDatabaseSystem {
     }
 
     @Override
-    public final DriverProvider getDriverProvider() {
+    public final DriverProvider driverProvider() {
         return this.provider;
     }
 
-    @Override
-    public QueryBuilder createBuilder(String table) {
-        return new MySqlQueryBuilder(table);
-    }
 
     @Override
     public boolean requirePool() {
